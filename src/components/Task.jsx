@@ -48,7 +48,6 @@ const Task = (props) => {
 
     function onEditDes(){
         setEditDes(true);
-        console.log(editDes);
     }
 
     const handleTitleInput = (e) =>{

@@ -11,7 +11,6 @@ import { combineReducers, compose } from "redux";
 
 const tasks = (state = {tasks:[]} , action) =>{
     const {payload} = action;
-    console.log('what is this',action.payload)
    
     switch(action.type)
     {
@@ -23,7 +22,6 @@ const tasks = (state = {tasks:[]} , action) =>{
         }
         case EDIT_TASK :{
             const newTasks = state.tasks.find(task => (task._id === payload.id));
-            console.log(state.tasks.find(task => (task._id === payload.id)))
             newTasks.title = payload.title;
             newTasks.description = payload.description;
             return{
@@ -40,7 +38,6 @@ const tasks = (state = {tasks:[]} , action) =>{
             };
         }
         case REMOVE_TASK:{
-            console.log(state.tasks);
             return{
                 ...state,
                 tasks: state.tasks.filter(task => task._id !== action.payload.id)

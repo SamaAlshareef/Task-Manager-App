@@ -12,7 +12,6 @@ function App(props) {
   const dispatch = useDispatch();
   useEffect(()=>{
     axios.get('http://localhost:4000/api/tasks').then((response)=>{
-      console.log('helo')
       dispatch({
           type:FETCH_DATA,
           payload: response.data,
@@ -34,7 +33,6 @@ function App(props) {
   }
 
   const onRemoveTask = (id) =>{
-    console.log('trying to delete');
     props.dispatch(removeTask(id));
 
   }

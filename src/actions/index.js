@@ -8,9 +8,7 @@ import { bindActionCreators } from 'redux';
 export const fetchData= () =>{
    
     return (dispatch) =>{
-        console.log('hi from2')
         axios.get('http://localhost:4000/api/tasks').then((response)=>{
-            console.log('helo')
             dispatch({
                 type:FETCH_DATA,
                 payload: response.data,

@@ -24,7 +24,6 @@ const TasksPage = (props) =>{
 
     const handleTitleInput = (e) =>{
         setTitle(e.target.value);
-       console.log('vhecl',title)
     }
     const handleDescInput = (e) =>{
         setDescription(e.target.value);
